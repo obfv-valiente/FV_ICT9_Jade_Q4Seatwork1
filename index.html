@@ -8,7 +8,7 @@
     <link rel= "icon" href="https://i.pinimg.com/1200x/05/65/70/05657036917d01f3b26e64ccc74e1b94.jpg" type="image/png">
 
     <!-- Username:serviceorsolitude 
-     Password:painr0tsthe1nside 
+     Password:
      note: sorry sir.. I forgot to send these details in the bin
      -->
 
@@ -67,10 +67,10 @@
 		<label for = "agree" style="color:#ffffff; text-shadow: 2px 2px 5px rgba(0,0,0,0.5);"> your session will stay active on this device.(stay logged in) ˖ ݁♬⋆.˚𝄞このデバイスではセッションがアクティブなままになります。（ログイン状態を維持）</label>
 		<br>
 
-  <button class="btn btn-sucess" type="button" onclick="Login()" style="color:#b6c8ff; font-size: 17px; background-color:#ffffff">Login/ログイン</button>
+  <button class="btn btn-success" type="button" onclick="Login()" style="color:#b6c8ff; font-size: 17px; background-color:#ffffff">Login/ログイン</button>
 
   
-  <button class="btn btn-sucess" type="button" onclick="window.location.reload()" style="color:#ffffff; font-size: 17px; background-color:#b6c8ff">Cancel/キャンセル</button>
+  <button class="btn btn-success" type="button" onclick="window.location.reload()" style="color:#ffffff; font-size: 17px; background-color:#b6c8ff">Cancel/キャンセル</button>
 
 </div>
 </div>
@@ -82,14 +82,14 @@
     <script>
         function Login(){
             let checkbox=document.getElementById("checkbox").checked;
-            let user=document.getElementById("username").value;
-            let pass= document.getElementById("password").value;
+            let user=document.getElementById("username").value.trim();
+            let pass= document.getElementById("password").value.trim();
 
             let correctuser= "serviceorsolitude";
             let correctpass="painr0tsthe1nside";
 
             let isempty=(user==="" || pass==="");
-            let iftrue= (user=== correctuser && pass === correctpass);
+            let ifcorrect= (user=== correctuser && pass === correctpass);
           
             switch(true){
 
@@ -100,7 +100,7 @@
                 case (checkbox=== false):
                     alert("Kindly agree to check the checkbox. /チェックボックスにチェックを入れて同意してください ");
                     break;
-                case (iftrue):
+                case (ifcorrect):
                     alert("Authorized Acess(許可されたアクセス): Wellcome back / おかえり ");
                 break;
 
